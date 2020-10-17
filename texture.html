@@ -112,7 +112,7 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 8,8);
+	let geometry1 = new THREE.PlaneBufferGeometry(8,8, 32,32);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'IMG-20201017-WA0074.jpg', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
