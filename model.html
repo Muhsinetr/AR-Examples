@@ -125,6 +125,10 @@ function initialize()
 	function onProgress(xhr) { console.log( (xhr.loaded / xhr.total * 100) + '% loaded' ); }
 	function onError(xhr) { console.log( 'An error happened' ); }
 	
+	new THREE.MTLLoader()
+		.setPath( 'models/' )
+		.load( 'fish-2.mtl', function ( materials ) {
+			materials.preload();
 			new THREE.OBJLoader()
 				.setMaterials( materials )
 				.setPath( 'models/' )
