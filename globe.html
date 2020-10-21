@@ -112,11 +112,11 @@ function initialize()
 		type: 'pattern', patternUrl: "data/letterB.patt",
 	})
 
-	let geometry1 = new THREE.SphereGeometry(2, 40,40);
+	let geometry1 = new THREE.SphereGeometry(3, 50,50);
 	
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/field-sphere.jpg', render );
-	let material1 = new THREE.MeshLambertMaterial( { map: texture, opacity: 1 } );
+	let material1 = new THREE.MeshLambertMaterial( { map: texture );
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 1;
