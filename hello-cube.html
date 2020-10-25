@@ -120,13 +120,16 @@ function initialize()
 	let material4	= new THREE.TextureLoader().load("IMG-20201017-WA0074.jpg");
 	let material5	= new THREE.TextureLoader().load("sinu.jpg");
 	let material6	= new THREE.TextureLoader().load("habi.jpg");
-	IMG- texturall.push(new THREE.MeshBasicMaterial({map:textre1}));
-		
-		
-		
-	}); 
+	texturall.push(new THREE.MeshBasicMaterial({map:textre1}));
+texturall.push(new THREE.MeshBasicMaterial({map:textre1}));
+texturall.push(new THREE.MeshBasicMaterial({map:textre2}));
+texturall.push(new THREE.MeshBasicMaterial({map:textre3}));
+texturall.push(new THREE.MeshBasicMaterial({map:textre4}));
+texturall.push(new THREE.MeshBasicMaterial({map:textre5}));
+texturall.push(new THREE.MeshBasicMaterial({map:textre6}));		
 	
-	mesh1 = new THREE.Mesh( geometry1, material1 );
+	
+	mesh1 = new THREE.Mesh( geometry1, texturall );
 	mesh1.position.y = 0.5;
 	
 	markerRoot1.add( mesh1 );
