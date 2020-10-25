@@ -23,7 +23,7 @@
 
 <script>
 
-var scene, camera, renderer, clock, deltaTime, totalTime;
+var scene, camera, renderer, clock, deltaTime, totalTime;1
 
 var arToolkitSource, arToolkitContext;
 
@@ -112,11 +112,18 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1	= new THREE.CubeGeometry(1,1,1);
-	let material1	= new THREE.MeshNormalMaterial({
-		transparent: true,
-		opacity: 0.5,
-		side: THREE.DoubleSide
+	let geometry1	= new THREE.BoxGeometry(1,1,1);
+	let texturall = [];	
+	let material1	= new THREE.TextureLoader().load("IMG-20201017-WA0074.jpg");
+	let material2	= new THREE.TextureLoader().load("sinu.jpg");
+	let material3	= new THREE.TextureLoader().load("habi.jpg");
+	let material4	= new THREE.TextureLoader().load("IMG-20201017-WA0074.jpg");
+	let material5	= new THREE.TextureLoader().load("sinu.jpg");
+	let material6	= new THREE.TextureLoader().load("habi.jpg");
+	IMG- texturall.push(new THREE.MeshBasicMaterial({map:textre1}));
+		
+		
+		
 	}); 
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
